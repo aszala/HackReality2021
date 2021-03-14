@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class OpenDoor : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    private bool opened = false;
+
     void Start()
     {
         
@@ -17,7 +19,11 @@ public class OpenDoor : MonoBehaviour
     }
 
     public void OnTriggerEnter(Collider other) {
-        if (other.name.Contains("Hand"))
-            this.transform.Rotate(new Vector3(0, -80, 0));
+        if (!opened) {
+            if (other.name.Contains("Hand")) {
+                this.transform.Rotate(new Vector3(0, -90, 0));
+                opened = true;
+            }
+        }
     }
 }

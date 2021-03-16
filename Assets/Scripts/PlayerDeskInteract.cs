@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerDeskInteract : MonoBehaviour {
 
@@ -11,7 +12,7 @@ public class PlayerDeskInteract : MonoBehaviour {
         bool hand = false, virus = false;
 
         foreach (string s in objects) {
-            if (s.Contains("Hand")) {
+            if (s.Contains("Hand") || s.Contains("GrabVolumeSmall")) {
                 hand = true;
             }
 
@@ -21,12 +22,13 @@ public class PlayerDeskInteract : MonoBehaviour {
 		}
 
         if (hand && virus) {
-            // Load new scene
-		}
+            SceneManager.LoadScene("DNASplitter");
+        }
 	}
 
 	public void OnTriggerEnter(Collider other) {
         objects.Add(other.name);
+        print(other.name);
     }
 
     public void OnTriggerExit(Collider other) {

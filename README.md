@@ -1,2 +1,3 @@
 # HackReality2021
-Not in github, but oculus integration Unity package is required
+Several Assets not in github due to upload limitations.
+See here for src.

@@ -1784,6 +1784,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.05616283, y: 2.0156624, z: 0.7599961}
   m_Center: {x: -0.017579554, y: -0.010664225, z: 0.36949596}
+--- !u!65 &235283503
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235283497}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.05616283, y: 2.0156624, z: 0.7599961}
+  m_Center: {x: -0.017579554, y: -0.010664225, z: 0.36949596}
 --- !u!1001 &238345826
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4395,14 +4408,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4133858333ed264ebae0d70265b7b6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AimButton: 67108864
-  TeleportButton: 67108864
+  AimButton: 4096
+  TeleportButton: 4096
   FastTeleport: 0
   LeftHand: {fileID: 0}
   RightHand: {fileID: 1114040581}
   InputMode: 1
   AimingController: 2
-  CapacitiveAimAndTeleportButton: 4
+  CapacitiveAimAndTeleportButton: 5
   ThumbstickTeleportThreshold: 0.5
 --- !u!114 &592954162
 MonoBehaviour:
@@ -6830,6 +6843,7 @@ GameObject:
   - component: {fileID: 885159490}
   - component: {fileID: 885159489}
   - component: {fileID: 885159488}
+  - component: {fileID: 885159491}
   m_Layer: 0
   m_Name: PlayerDesk
   m_TagString: Untagged
@@ -6862,8 +6876,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.9999995, y: 1, z: 0.6302272}
+  m_Center: {x: 0, y: 0, z: -0.18488665}
 --- !u!23 &885159489
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6911,6 +6925,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 885159486}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &885159491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885159486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a969721f7653386478fc88f101807965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &885499129
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17245,7 +17271,7 @@ GameObject:
   - component: {fileID: 4967176418388524}
   - component: {fileID: 33559156142147186}
   - component: {fileID: 23743054808184438}
-  - component: {fileID: 1254844946079127}
+  - component: {fileID: 1254844946079130}
   - component: {fileID: 1254844946079129}
   - component: {fileID: 1254844946079128}
   m_Layer: 0
@@ -17253,25 +17279,8 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1254844946079127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1254844946079126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_allowOffhandGrab: 1
-  m_snapPosition: 0
-  m_snapOrientation: 0
-  m_snapOffset: {fileID: 0}
-  m_grabPoints: []
 --- !u!54 &1254844946079128
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -17283,7 +17292,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -17301,6 +17310,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.041862834, y: 0.04167221, z: 0.21224825}
   m_Center: {x: 0.00010037795, y: 0.00006738584, z: -0.10602289}
+--- !u!114 &1254844946079130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254844946079126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 712bdba1fe426d649880ded5c42ab46d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!1 &1596443419454072
 GameObject:
   m_ObjectHideFlags: 0
@@ -17317,7 +17343,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4967176418388524
 Transform:

@@ -7,6 +7,14 @@ public class PlayerDeskInteract : MonoBehaviour {
 
     private List<string> objects = new List<string>();
 
+    public GameObject player;
+
+	private void Start() {
+        int sceneIndex = SceneManager.GetActiveScene().buildIndex;
+        if (SavedPositionManager.savedPositions.ContainsKey(sceneIndex)) {
+            player.transform.position = SavedPositionManager.savedPositions[sceneIndex];
+        }
+    }
 
 	void Update() {
         bool hand = false, virus = false;
@@ -22,6 +30,9 @@ public class PlayerDeskInteract : MonoBehaviour {
 		}
 
         if (hand && virus) {
+            int sceneIndex = SceneManager.GetActiveScene().buildIndex;
+            SavedPositionManager.savedPositions[sceneIndex] = transform.position;
+
             SceneManager.LoadScene("DNASplitter");
         }
 	}

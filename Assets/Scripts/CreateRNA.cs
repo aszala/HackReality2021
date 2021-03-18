@@ -9,6 +9,8 @@ public class CreateRNA : MonoBehaviour {
 
     private List<string> objects = new List<string>();
 
+    private bool spawned = false;
+
     void Update() {
         bool poly = false, protein = false;
 
@@ -22,13 +24,16 @@ public class CreateRNA : MonoBehaviour {
             }
         }
 
-        if (poly && protein) {
+        if (poly && protein && !spawned) {
             Destroy(GameObject.Find("Polymerase"));
             Destroy(GameObject.Find("Spike"));
 
             GameObject r = Instantiate(rna);
             r.transform.position = new Vector3(-0.254f, 1.558f, 0.881f);
             r.name = "RNA";
+
+            spawned = true;
+            objects.Clear();
         }
     }
 

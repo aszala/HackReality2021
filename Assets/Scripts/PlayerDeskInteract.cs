@@ -9,10 +9,16 @@ public class PlayerDeskInteract : MonoBehaviour {
 
     public GameObject player;
 
+    public GameObject RNASample;
+
 	private void Start() {
         int sceneIndex = SceneManager.GetActiveScene().buildIndex;
         if (SavedPositionManager.savedPositions.ContainsKey(sceneIndex)) {
             player.transform.position = SavedPositionManager.savedPositions[sceneIndex];
+
+            RNASample.SetActive(true);
+        } else {
+            RNASample.SetActive(false);
         }
     }
 
@@ -33,9 +39,16 @@ public class PlayerDeskInteract : MonoBehaviour {
             int sceneIndex = SceneManager.GetActiveScene().buildIndex;
             SavedPositionManager.savedPositions[sceneIndex] = transform.position;
 
-            SceneManager.LoadScene("DNASplitter");
+            StartCoroutine(loadNext());
+
+            objects.Clear();
         }
 	}
+
+    IEnumerator loadNext() {
+        yield return new WaitForSeconds(10);
+        SceneManager.LoadScene("DNASplitter");
+    }
 
 	public void OnTriggerEnter(Collider other) {
         objects.Add(other.name);

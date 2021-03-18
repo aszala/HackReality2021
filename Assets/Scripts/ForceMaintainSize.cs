@@ -20,6 +20,7 @@ public class ForceMaintainSize : OVRGrabbable {
 
 		transform.parent = hand.transform;
 		transform.localScale = scale;
+		transform.localPosition = new Vector3(0, 0, 0);
     }
 
 	public override void GrabEnd(Vector3 linearVelocity, Vector3 angularVelocity) {

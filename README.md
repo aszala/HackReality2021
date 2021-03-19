@@ -26,5 +26,5 @@ Download the latest release and install it onto your mobile device or VR headset
 
 ## Misc.
 Notice any bugs or have any ideas for the future of this project? Feel free to contact zala.abhay@gmail.com or open a new issue / pull request.
-Several assets are taken from the Unity Asset Store.
+Several assets are taken from the Unity Asset Store as well as free online sites such as CGTrader and TurboSquid.
 Cell Spike Protein Production is from Vox Youtube.

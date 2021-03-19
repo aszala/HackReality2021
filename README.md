@@ -7,7 +7,7 @@ Note: Several Assets not in github due to upload limitations. See here for full 
 This project was developed using the Unity Game Engine using the Oculus Integration libraries. All code is written in C#.
 
 ## Inspiration
-Recently due to the COVID-19 virus, learning has become increasingly difficult, especially for people that require direct physical access to equipment. New healthcare workers such as new nurses and doctors also cannot get the same real experience working with patients anymore. This tool was aimed to help solve these issues.
+Recently due to the COVID-19 virus, learning has become increasingly difficult, especially for people that require direct physical access to equipment. New healthcare workers such as new nurses and doctors also cannot get the same real experience working with patients anymore. This project was aimed to help solve these issues.
 
 ## Challenges we ran into
 VR Development in Unity is a new topic for us, so we started this project unfamiliar with many things. We had to spend time learning and experimenting with Unity and the Oculus. We also had a significant time issue, since we had classes/exams as well as various other obligations throughout the week. Since we are Computer Science students, we were not aware of the various biology and chemistry / general healthcare information that was needed for this project, so we had to spend special time doing research in those areas to learn.

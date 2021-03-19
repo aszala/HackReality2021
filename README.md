@@ -1,16 +1,16 @@
 # HackReality2021
-During this Hackathon, we built a virtual system for assiting the healthcare industry. In this system, they can be interactively trained and educated on various healthcare concepts. This project serves as a proof of concept of what can be done in the near future. Currently, the system educates on how vaccines are developed by allowing healthcare workers to interact with virtual patients and practice without risk.
+During this Hackathon, we built a virtual system for assisting the healthcare industry. In this system, they can be interactively trained and educated on various healthcare concepts. This project serves as a proof of concept of what can be done in the near future. Currently, the system educates on how vaccines are developed by allowing healthcare workers to interact with virtual patients and practice without risk.
 
 Note: Several Assets not in github due to upload limitations. See here for full src.
 
 ## Inspiration
-Recently due to the COVID-19 pandemic, learning has become increasingly difficult. This is especially strenuos for people that require direct physical access to equipment like labware and appliances. New doctors and nurses are unable to get valuable in-person training. This project was aimed to help solve these issues.
+Recently due to the COVID-19 pandemic, learning has become increasingly difficult. This is especially strenuous for people that require direct physical access to equipment like labware and appliances. New doctors and nurses are unable to get valuable in-person training. This project was aimed to help solve these issues.
 
 ## How we built it
 This project was developed using the Unity Game Engine utilizing the Oculus Integration libraries. All code is written in C#.
 
 ## Challenges we ran into
-VR Development in Unity is a new topic for us, so we started this project unfamiliar with many of its functionalities and abilities. We had to spend time learning and experimenting with Unity and the Oculus. Due to our classes and exams, how we delegated our time played a significant role in the overall development of our project. Since we are primarily focused in Computer Science we were not aware of the various biology and chemistry / general healthcare information that was needed to make this project succesful, so we had to spend special time doing research in those areas to gain a better understanding of the healthcare industry.
+VR Development in Unity is a new topic for us, so we started this project unfamiliar with many of its functionalities and abilities. We had to spend time learning and experimenting with Unity and the Oculus. Due to our classes and exams, how we delegated our time played a significant role in the overall development of our project. Since we are primarily focused on Computer Science we were not aware of the various biology and chemistry / general healthcare information that was needed to make this project successful, so we had to spend special time doing research in those areas to gain a better understanding of the healthcare industry.
 
 ## Accomplishments that we're proud of
 We are proud that we were able to overcome the challenges we faced and produce a completed project that could be useful to the real world in the near future. We are also proud of all that we learned over the course of this project and the Hackathon.

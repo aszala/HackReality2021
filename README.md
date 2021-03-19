@@ -18,7 +18,7 @@ We are proud that we were able to overcome the challenges we faced and produce a
 ## What we learned
 We learned a lot about XR systems, more specifically VR systems. We also learned more about Unity and how to develop VR applications through it. Learning new information in fields that were previously foreign to us, helped shape our understanding of the interdisciplinary attributes of computer science and how we can make tangible projects that impact the real world.
 
-## What's next for Virtual Healthcare System
+## What's next for Cyber Lab
 This project is just a prototype of what can be done. This technology can span beyond just vaccines and into other areas of the healthcare industry such as surgery or telemedicine. The virtual interaction with patients is also limited in this project and can be easily expanded upon in the future.
 
 ## Running the Application

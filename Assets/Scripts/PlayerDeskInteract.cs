@@ -17,8 +17,12 @@ public class PlayerDeskInteract : MonoBehaviour {
             player.transform.position = SavedPositionManager.savedPositions[sceneIndex];
 
             RNASample.SetActive(true);
+            GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayClip(3);
+            GameObject.Find("Target").transform.position = new Vector3(-5.202f, 1.089f, 13.244f);
+            Instantiate(GameObject.Find("Target")).transform.position = new Vector3(-14.357f, 1.101f, 9.189f);
         } else {
             RNASample.SetActive(false);
+            GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayClip(0);
         }
     }
 
@@ -39,6 +43,8 @@ public class PlayerDeskInteract : MonoBehaviour {
             int sceneIndex = SceneManager.GetActiveScene().buildIndex;
             SavedPositionManager.savedPositions[sceneIndex] = transform.position;
 
+            GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayClip(2);
+            GameObject.Find("Target").transform.position = new Vector3(0f, 0f, 0f);
             StartCoroutine(loadNext());
 
             objects.Clear();

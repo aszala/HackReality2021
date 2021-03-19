@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class MoveToOffice : MonoBehaviour {
     public void OnTriggerEnter(Collider other) {
         if (other.name.Contains("RNA")) {
+            GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayClip(4);
             StartCoroutine(loadNext());
         }
     }

@@ -7,6 +7,8 @@ public class ReturnExitCyberspace : MonoBehaviour {
 
     public void OnTriggerEnter(Collider other) {
         if (other.name.Contains("RNA")) {
+
+            GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayClip(5);
             StartCoroutine(loadNext());
         }
     }

@@ -4,13 +4,25 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class UseVaccine : MonoBehaviour {
-    public void OnTriggerEnter(Collider other) {
+
+    private bool saidLine = false;
+
+	private void Start() {
+        GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayClip(0);
+    }
+
+	public void OnTriggerEnter(Collider other) {
         if (other.name.Contains("Vaccine")) {
             bool end = EndGame.deliverVaccine();
             other.gameObject.name = "Empty";
 
             if (end) {
                 StartCoroutine(endGame());
+			} else {
+                if (!saidLine) {
+                    GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayClip(1);
+                    saidLine = true;
+                }
 			}
         }
     }

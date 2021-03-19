@@ -7,6 +7,8 @@ public class ForceMaintainSize : OVRGrabbable {
 	private Transform base_parent;
 	private Vector3 scale;
 
+	private bool saidLine = false;
+
 	protected override void Start() {
 		base.Start();
 
@@ -21,6 +23,13 @@ public class ForceMaintainSize : OVRGrabbable {
 		transform.parent = hand.transform;
 		transform.localScale = scale;
 		transform.localPosition = new Vector3(0, 0, 0);
+
+		if (transform.name.Equals("Virus Sample") && !saidLine) {
+			saidLine = true;
+			GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayClip(2);
+
+			GameObject.Find("Target").transform.position = new Vector3(-14.368f, 1.054f, 9.129f);
+		}
     }
 
 	public override void GrabEnd(Vector3 linearVelocity, Vector3 angularVelocity) {

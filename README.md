@@ -1,5 +1,5 @@
 # HackReality2021 - Cyber Lab
-During this Hackathon, we built a virtual system called Cyber Lab for assisting the healthcare industry. In this system, they can be interactively trained and educated on various healthcare concepts. This project serves as a proof of concept of what can be done in the near future. Currently, the system educates on how vaccines are developed by allowing healthcare workers to interact with virtual patients and practice without risk.
+During this Hackathon, we built a virtual system called Cyber Lab for assisting the healthcare industry. In this system, healthcare workers can be interactively trained and educated on various advanced healthcare concepts. Currently, the system educates on how vaccines are developed by allowing healthcare workers to interact with virtual patients and practice without risk.
 
 Note: Several Assets not in github due to upload limitations. See [here](https://drive.google.com/file/d/1vVBz_8a52CSvobvhxDA1iBGsV20jlL8G/view?usp=sharing) for full src.
 

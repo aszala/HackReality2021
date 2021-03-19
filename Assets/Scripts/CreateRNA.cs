@@ -23,7 +23,7 @@ public class CreateRNA : MonoBehaviour {
     IEnumerator sayNext() {
         yield return new WaitForSeconds(8);
         GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayClip(1);
-        GameObject.Find("Target").transform.position = new Vector3(0, 0, 0);
+        GameObject.Find("Target").transform.position = new Vector3(0, -10, 0);
     }
 
 	void Update() {
@@ -40,6 +40,8 @@ public class CreateRNA : MonoBehaviour {
                 if (!saidLine) {
                     GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayClip(2);
                     GameObject.Find("Target").transform.position = new Vector3(0.554f, 1.1705f, 0.7854f);
+
+                    saidLine = true;
                 }
             }
         }
@@ -48,8 +50,6 @@ public class CreateRNA : MonoBehaviour {
 
             GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayClip(3);
 
-            Destroy(GameObject.Find("Polymerase"));
-            Destroy(GameObject.Find("Spike"));
             spawned = true;
             objects.Clear();
 
@@ -59,6 +59,9 @@ public class CreateRNA : MonoBehaviour {
 
     IEnumerator makeRNA() {
         yield return new WaitForSeconds(26);
+
+        Destroy(GameObject.Find("Polymerase"));
+        Destroy(GameObject.Find("Spike"));
 
         GameObject r = Instantiate(rna);
         r.transform.position = new Vector3(-0.254f, 1.558f, 0.881f);
@@ -76,8 +79,9 @@ public class CreateRNA : MonoBehaviour {
     }
 
     public void OnTriggerEnter(Collider other) {
-        objects.Add(other.name);
-        print(other.name);
+        if (!spawned) {
+            objects.Add(other.name);
+        }
     }
 
     public void OnTriggerExit(Collider other) {

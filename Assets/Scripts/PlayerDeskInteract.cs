@@ -11,6 +11,8 @@ public class PlayerDeskInteract : MonoBehaviour {
 
     public GameObject RNASample;
 
+    private bool saidLine = false;
+
 	private void Start() {
         int sceneIndex = SceneManager.GetActiveScene().buildIndex;
         if (SavedPositionManager.savedPositions.ContainsKey(sceneIndex)) {
@@ -39,7 +41,7 @@ public class PlayerDeskInteract : MonoBehaviour {
 			}
 		}
 
-        if (hand && virus) {
+        if (hand && virus && !saidLine) {
             int sceneIndex = SceneManager.GetActiveScene().buildIndex;
             SavedPositionManager.savedPositions[sceneIndex] = transform.position;
 
@@ -48,6 +50,8 @@ public class PlayerDeskInteract : MonoBehaviour {
             StartCoroutine(loadNext());
 
             objects.Clear();
+
+            saidLine = true;
         }
 	}
 
